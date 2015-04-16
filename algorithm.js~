@@ -1,0 +1,47 @@
+var fs = require('fs');
+
+fs.readFile("Tariff Voucher",function(err,data){
+	if(err || !data) console.log(err);
+	else
+	{
+		var docs = JSON.parse(data);
+		for (var i = 0;  i < docs[0].data.length; i++) {
+			
+			
+			console.log("id : " + docs[0].data[i].id);
+			console.log("price : " + docs[0].data[i].recharge_value);
+			console.log("validity : " + docs[0].data[i].recharge_validity);
+			console.log("short_description : " + docs[0].data[i].recharge_short_description);
+			console.log("description : " + docs[0].data[i].recharge_description);
+			//console.log("operator :" + docs[0].data[i].recharge_master);
+			console.log();
+		
+		}
+	}
+});
+
+
+
+
+
+
+
+/*function algo()
+{
+
+	product= localIn	*	recLocalIn	*
+		 localOut	*	recLocalOut 	*
+		 stdIn	        *	recStdIn	*
+		 stdOut	        *	recStdOut	*
+		 landLine	*	reclandLine	*
+		 roamningIn	*	recroamingIn	*
+		 roamingLocal	* 	recRoamingLocal *
+		 roamingStd	*	roamingStd ;
+	          
+	console.log(product);
+} 
+
+algo();
+*/
+
+

@@ -1,0 +1,14 @@
+var dburl = "localhost/abhi";
+var db = require('mongojs').connect(dburl);
+db.getCollectionNames( function(err,docs){
+	if(err) console.log(err);
+	else
+		{
+			docs.forEach(function(doc){
+				console.log(doc);
+				console.log(typeof(doc));
+				
+			})
+		}
+		console.log("success");
+});
