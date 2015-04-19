@@ -86,7 +86,7 @@ function want_plans(response,request) {
 							console.log("estimated cost =" + estimated_cost ); 
 
 						}
-						response.write(datatosend);
+						response.write(JSON.stringify(datatosend));
 						response.end();
 					}
 					else if(received.plan == 'LOCAL & STD'){
@@ -122,7 +122,7 @@ function want_plans(response,request) {
 							
 							
 						}
-						response.write(datatosend);
+						response.write(JSON.stringify(datatosend));
 						response.end();
 					}
 

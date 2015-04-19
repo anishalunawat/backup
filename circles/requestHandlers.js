@@ -39,7 +39,7 @@ function want_plans(response,request) {
 		});
 		request.on('end', function () {
 			var received = JSON.parse(body);
-			//console.log(received);
+			console.log(received);
 			var coll =  circle + received.operator +  "catagorized";
 			console.log(coll);
 			var plans = db2.collection(coll);
